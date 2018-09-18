@@ -8,7 +8,7 @@ Q. Cao, L. Shen, W. Xie, O. M. Parkhi, A. Zisserman,
 In FG 2018. 
 ```
 <div align="center">
-  <img src="https://github.com/ox-vgg/vgg_face2/web_page_img.png">
+  <img src="https://github.com/ox-vgg/vgg_face2/blob/master/web_page_img.png">
 </div>
 
 ## News
