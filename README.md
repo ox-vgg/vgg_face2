@@ -27,7 +27,8 @@ We report 1:1 verification performance (center 224x224 crop from resized image w
 | SE-ResNet-50   | 2048 |  Y  | 0.908 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_ft_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_ft_mat.tar.gz), [TF], [PyTorch] |
 | ResNet-50-256D | 256  |  Y  | 0.898 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_256_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_256_mat.tar.gz), [TF], [PyTorch] |
 | ResNet-50-128D | 128  |  Y  | 0.904 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_128_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_128_mat.tar.gz), [TF], [PyTorch] |
-
+| SE-ResNet-50-256D|  256    |    Y   | 0.912 | 0.965 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_256_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_256_mat.tar.gz), [TF], [PyTorch] |
+| SE-ResNet-50-128D|  128    |    Y   | 0.910 | 0.959 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_128_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_128_mat.tar.gz), [TF], [PyTorch] |
 ## Compatibility
 
 **Caffe**: SE models use the "Axpy" layer which is a combination of two consecutive operations *channel-wise scale* and *element-wise summation* (More information can be found [here](https://github.com/hujie-frank/SENet).) Please note that the input mean vector is in BGR order.
