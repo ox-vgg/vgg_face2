@@ -21,17 +21,17 @@ We report 1:1 verification performance (center 224x224 crop from resized image w
 
 | Architecture   | Feat dim | Pretrain | TAR@FAR = 0.001 | TAR@FAR = 0.01 | Model Link |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-|   ResNet-50    | 2048 |  N  | 0.878 | 0.938 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_scratch_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_scratch_mat.tar.gz), [TF], [PyTorch] |
-|   ResNet-50    | 2048 |  Y  | 0.891 | 0.947 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_ft_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_ft_mat.tar.gz), [TF], [PyTorch] |
+|   ResNet-50    | 2048 |  N  | 0.878 | 0.938 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_scratch_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_scratch_mat.tar.gz), [TF], [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/resnet50_scratch_pytorch.tar.gz) |
+|   ResNet-50    | 2048 |  Y  | 0.891 | 0.947 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_ft_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_ft_mat.tar.gz), [TF], [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/resnet50_ft_pytorch.tar.gz) |
 | SE-ResNet-50   | 2048 |  N  | 0.888 | 0.949 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_scratch_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_scratch_mat.tar.gz), [TF], [PyTorch] |
 | SE-ResNet-50   | 2048 |  Y  | 0.908 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_ft_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_ft_mat.tar.gz), [TF], [PyTorch] |
-| ResNet-50-256D | 256  |  Y  | 0.898 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_256_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_256_mat.tar.gz), [TF], [PyTorch] |
-| ResNet-50-128D | 128  |  Y  | 0.904 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_128_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_128_mat.tar.gz), [TF], [PyTorch] |
+| ResNet-50-256D | 256  |  Y  | 0.898 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_256_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_256_mat.tar.gz), [TF], [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/resnet50_256_pytorch.tar.gz) |
+| ResNet-50-128D | 128  |  Y  | 0.904 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_128_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_128_mat.tar.gz), [TF], [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/resnet50_128_pytorch.tar.gz) |
 | SE-ResNet-50-256D|  256    |    Y   | 0.912 | 0.965 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_256_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_256_mat.tar.gz), [TF], [PyTorch] |
 | SE-ResNet-50-128D|  128    |    Y   | 0.910 | 0.959 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_128_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_128_mat.tar.gz), [TF], [PyTorch] |
 ## Compatibility
 
-**Caffe**: SE models use the "Axpy" layer which is a combination of two consecutive operations *channel-wise scale* and *element-wise summation* (More information can be found [here](https://github.com/hujie-frank/SENet).) Please note that the input mean vector is in BGR order.
+**Caffe**: SE models use the "Axpy" layer which is a combination of two consecutive operations *channel-wise scale* and *element-wise summation* (More information can be found [here](https://github.com/hujie-frank/SENet).) Please note that the input mean vector is in BGR order as opencv is used for loading images.
 
 **MatConvNet**: This code uses the following three modules: 
 * [autonn](https://github.com/vlfeat/autonn) - a wrapper for MatConvNet
@@ -43,7 +43,7 @@ All of these can be setup directly with `vl_contrib` (i.e. run `vl_contrib insta
 
 **TensorFlow**: coming soon.
 
-**PyTorch**: coming soon.
+**PyTorch**: Imported from Caffe models using the tool [5].
 
 ## Pre-processing:
 We use [MTCNN](https://github.com/kpzhang93/MTCNN_face_detection_alignment) for face detection. This bounding box is then extended by a factor 0.3 (except the extension outside image) to include the whole head, which is used as network input (Please note that the released faces are based on a larger extension ratio 1.0. The coordinates of bounding boxes and 5 facial keypoints referring to the loosely cropped faces can be found [here](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/).
@@ -55,6 +55,8 @@ We use [MTCNN](https://github.com/kpzhang93/MTCNN_face_detection_alignment) for 
 [3] K. He, X. Zhang, S. Ren, and J. Sun. Deep residual learning for image recognition. In CVPR 2016.
 
 [4] J. Hu, L. Shen and G. Sun. Squeeze-and-Excitation Networks. In CVPR 2018.
+
+[5] C. Chen, J. Yao, R. Zhang, Y. Zhou, T. Qin, T. Zhan and Q. Wang. MMdnn:http://github.com/Microsoft/MMdnn 
 
 ## Acknowledgements
 This research is based upon work supported by the Office of the Director of National Intelligence (ODNI), Intel- ligence Advanced Research Projects Activity (IARPA), via contract number 2014-14071600010. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of ODNI, IARPA, or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for Governmental purpose notwithstanding any copyright annotation thereon.
