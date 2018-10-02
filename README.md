@@ -14,7 +14,7 @@ In FG 2018.
 ## News
 | Date     | Update |
 |----------|--------|
-[2018-10-01 | Models imported to PyTorch. Example scripts for cropping faces and evaluating on IJB-B can be found in the folder 'standard_evaluation'. 
+|2018-10-01 | Models imported to PyTorch. Example scripts for cropping faces and evaluating on IJB-B can be found in the folder 'standard_evaluation'. 
 |2018-09-18 | Models with lower-dimensional embedding layers for feature representation.
 |2018-04-10 | New models trained on VGGFace2 (see below). Training details can be found in the [paper](http://www.robots.ox.ac.uk/~vgg/publications/2018/Cao18/cao18.pdf). |
 ## Trained models
