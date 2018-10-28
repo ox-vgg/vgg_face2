@@ -44,7 +44,15 @@ All of these can be setup directly with `vl_contrib` (i.e. run `vl_contrib insta
 
 **TensorFlow**: coming soon.
 
-**PyTorch**: Imported from Caffe models using the tool [5].
+**PyTorch**: Imported from Caffe models using the tool [5]. Models can be loaded by using:
+
+```
+import imp
+import torch
+# 'senet50_256_pytorch' is the model name
+MainModel = imp.load_source('MainModel', 'senet50_256_pytorch.py') 
+model = torch.load('senet50_256_pytorch.pth')
+```
 
 ## Pre-processing:
 We use [MTCNN](https://github.com/kpzhang93/MTCNN_face_detection_alignment) for face detection. This bounding box is then extended by a factor 0.3 (except the extension outside image) to include the whole head, which is used as network input (Please note that the released faces are based on a larger extension ratio 1.0. The coordinates of bounding boxes and 5 facial keypoints referring to the loosely cropped faces can be found [here](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/).
