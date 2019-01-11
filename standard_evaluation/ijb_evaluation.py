@@ -124,10 +124,15 @@ if __name__ == '__main__':
     # format:
     #           tid_1 tid_2 label
     # =============================================================
-    meta = np.loadtxt(os.path.join('meta', 'ijbb_template_pair_label.txt'), dtype=str)
-    Y = np.array([int(y[-1]) for y in meta])
-    p1 = np.array([int(p[0]) for p in meta])
-    p2 = np.array([int(p[1]) for p in meta])
+    file = open(os.path.join('meta', 'ijbb_template_pair_label.txt'), 'r')
+    meta = file.readlines()
+    Y, p1, p2 = [], [], []
+    for m in meta:
+        msplit = m.split()
+        Y += [int(msplit(-1))]
+        p1 += [int(msplit(0))]
+        p2 += [int(msplit(1))]
+    Y, p1, p2 = map(np.array, [Y, p1, p2])
     score = np.zeros((len(p1),))   # cls prediction
 
     # =============================================================
