@@ -22,7 +22,7 @@ We report 1:1 verification performance (center 224x224 crop from resized image w
 
 **Python Version**: To load the PyTorch model, make sure you are using python2.x. 
 
-**TF Model(Keras)**: Please check this repo([https://github.com/WeidiXie/Keras-VGGFace2-ResNet50]). 
+**TF Model(Keras)**: Please check this [repo](https://github.com/WeidiXie/Keras-VGGFace2-ResNet50). 
 
 | Architecture   | Feat dim | Pretrain | TAR@FAR = 0.001 | TAR@FAR = 0.01 | Model Link |
 |:-:|:-:|:-:|:-:|:-:|:-:|
