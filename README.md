@@ -21,7 +21,8 @@ In FG 2018.
 We report 1:1 verification performance (center 224x224 crop from resized image with shorter side = 256) on IJB-B [1] for reference ([ROC](https://github.com/lishen-shirley/vggface2/blob/master/ijbb_roc.png). Higher is better). More evaluation results can be found in the [paper](http://www.robots.ox.ac.uk/~vgg/publications/2018/Cao18/cao18.pdf). Models in *pretrain* setting are trained on MS-Celeb-1M [2] dataset and then fine-tuned on VGGFace2 dataset. ResNet-50 models follow the architectural configuration in [3] and SE-ResNet-50 models follow the one in [4]. "<model-#D>" means that a lower-dimensional embedding layer is stacked on the top of the original final feature layer adjacent to classifier. The models are trained with standard softmax loss.
 
 **Python Version**: To load the PyTorch model, make sure you are using python2.x. 
-**TF Model(Keras)**: Please check this repo [https://github.com/WeidiXie/Keras-VGGFace2-ResNet50]. 
+
+**TF Model(Keras)**: Please check this repo([https://github.com/WeidiXie/Keras-VGGFace2-ResNet50]). 
 
 | Architecture   | Feat dim | Pretrain | TAR@FAR = 0.001 | TAR@FAR = 0.01 | Model Link |
 |:-:|:-:|:-:|:-:|:-:|:-:|
