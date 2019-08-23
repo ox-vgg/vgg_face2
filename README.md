@@ -24,6 +24,8 @@ We report 1:1 verification performance (center 224x224 crop from resized image w
 
 **TF Model (Keras)**: Please check this [repo](https://github.com/WeidiXie/Keras-VGGFace2-ResNet50). 
 
+**PyTorch**: We are fixing the pytorch models, will be available soon. 
+
 | Architecture   | Feat dim | Pretrain | TAR@FAR = 0.001 | TAR@FAR = 0.01 | Model Link |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |   ResNet-50    | 2048 |  N  | 0.878 | 0.938 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_scratch_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/resnet50_scratch_pytorch.tar.gz) |
@@ -45,10 +47,6 @@ We report 1:1 verification performance (center 224x224 crop from resized image w
 
 All of these can be setup directly with `vl_contrib` (i.e. run `vl_contrib install <module-name>` then `vl_contrib setup 
 <module-name>`).
-
-**TensorFlow**: coming soon.
-
-**PyTorch**: Imported from Caffe models using the tool [5]. Models can be loaded by using:
 
 ```
 import imp
