@@ -20,18 +20,20 @@ In FG 2018.
 ## Trained models
 We report 1:1 verification performance (center 224x224 crop from resized image with shorter side = 256) on IJB-B [1] for reference ([ROC](https://github.com/lishen-shirley/vggface2/blob/master/ijbb_roc.png). Higher is better). More evaluation results can be found in the [paper](http://www.robots.ox.ac.uk/~vgg/publications/2018/Cao18/cao18.pdf). Models in *pretrain* setting are trained on MS-Celeb-1M [2] dataset and then fine-tuned on VGGFace2 dataset. ResNet-50 models follow the architectural configuration in [3] and SE-ResNet-50 models follow the one in [4]. "<model-#D>" means that a lower-dimensional embedding layer is stacked on the top of the original final feature layer adjacent to classifier. The models are trained with standard softmax loss.
 
-**Python Version**: To load the PyTorch model, make sure you are using python2.x. 
+**TF Model (Keras)**: Please check this [repo](https://github.com/WeidiXie/Keras-VGGFace2-ResNet50). 
+
+**PyTorch**: We are fixing the pytorch models, will be available soon. 
 
 | Architecture   | Feat dim | Pretrain | TAR@FAR = 0.001 | TAR@FAR = 0.01 | Model Link |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-|   ResNet-50    | 2048 |  N  | 0.878 | 0.938 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_scratch_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_scratch_mat.tar.gz), [TF], [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/resnet50_scratch_pytorch.tar.gz) |
-|   ResNet-50    | 2048 |  Y  | 0.891 | 0.947 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_ft_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_ft_mat.tar.gz), [TF], [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/resnet50_ft_pytorch.tar.gz) |
-| SE-ResNet-50   | 2048 |  N  | 0.888 | 0.949 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_scratch_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_scratch_mat.tar.gz), [TF], [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/senet50_scratch_pytorch.tar.gz)|
-| SE-ResNet-50   | 2048 |  Y  | 0.908 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_ft_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_ft_mat.tar.gz), [TF], [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/senet50_ft_pytorch.tar.gz)|
-| ResNet-50-256D | 256  |  Y  | 0.898 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_256_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_256_mat.tar.gz), [TF], [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/resnet50_256_pytorch.tar.gz) |
-| ResNet-50-128D | 128  |  Y  | 0.904 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_128_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_128_mat.tar.gz), [TF], [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/resnet50_128_pytorch.tar.gz) |
-| SE-ResNet-50-256D|  256    |    Y   | 0.912 | 0.965 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_256_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_256_mat.tar.gz), [TF], [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/senet50_256_pytorch.tar.gz)|
-| SE-ResNet-50-128D|  128    |    Y   | 0.910 | 0.959 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_128_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_128_mat.tar.gz), [TF], [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/senet50_128_pytorch.tar.gz) |
+|   ResNet-50    | 2048 |  N  | 0.878 | 0.938 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_scratch_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_scratch_mat.tar.gz), [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/resnet50_scratch_pytorch.tar.gz) |
+|   ResNet-50    | 2048 |  Y  | 0.891 | 0.947 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_ft_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_ft_mat.tar.gz), [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/resnet50_ft_pytorch.tar.gz) |
+| SE-ResNet-50   | 2048 |  N  | 0.888 | 0.949 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_scratch_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_scratch_mat.tar.gz), [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/senet50_scratch_pytorch.tar.gz)|
+| SE-ResNet-50   | 2048 |  Y  | 0.908 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_ft_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_ft_mat.tar.gz), [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/senet50_ft_pytorch.tar.gz)|
+| ResNet-50-256D | 256  |  Y  | 0.898 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_256_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_256_mat.tar.gz), [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/resnet50_256_pytorch.tar.gz)|
+| ResNet-50-128D | 128  |  Y  | 0.904 | 0.956 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/resnet50_128_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/resnet50_128_mat.tar.gz), [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/resnet50_128_pytorch.tar.gz) |
+| SE-ResNet-50-256D|  256    |    Y   | 0.912 | 0.965 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_256_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_256_mat.tar.gz), [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/senet50_256_pytorch.tar.gz)|
+| SE-ResNet-50-128D|  128    |    Y   | 0.910 | 0.959 | [Caffe](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/caffe/senet50_128_caffe.tar.gz), [MatConvNet](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/matconvnet/senet50_128_mat.tar.gz), [PyTorch](http://www.robots.ox.ac.uk/~vgg/data/vgg_face2/models/pytorch/senet50_128_pytorch.tar.gz) |
 ## Compatibility
 
 **Caffe**: SE models use the "Axpy" layer which is a combination of two consecutive operations *channel-wise scale* and *element-wise summation* (More information can be found [here](https://github.com/hujie-frank/SENet).) Please note that the input mean vector is in BGR order as opencv is used for loading images.
@@ -43,10 +45,6 @@ We report 1:1 verification performance (center 224x224 crop from resized image w
 
 All of these can be setup directly with `vl_contrib` (i.e. run `vl_contrib install <module-name>` then `vl_contrib setup 
 <module-name>`).
-
-**TensorFlow**: coming soon.
-
-**PyTorch**: Imported from Caffe models using the tool [5]. Models can be loaded by using:
 
 ```
 import imp
